@@ -4,6 +4,7 @@ let createNewAddressUser = async (req, res) => {
     try {
         let data = await addressUserService.createNewAddressUser(req.body);
         return res.status(200).json(data);
+        
     } catch (error) {
         console.log(error)
         return res.status(401).json({
